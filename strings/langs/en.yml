@@ -267,9 +267,9 @@ V_C_5 : "ᴛʜᴇʀᴇ ɪs ɴᴏ ᴀᴄᴛɪᴠᴇ ᴄᴀʟʟ ɪɴ ᴛʜɪs ᴄ�
 
 
 #General Buttons
-CLOSE_BUTTON  : "✯ ¢ℓσѕє ✯"
-CLOSEMENU_BUTTON  : "✯ ¢ℓσѕє ✯"
-BACK_BUTTON : "✯ вα¢к ✯"
+CLOSE_BUTTON  : "❌"
+CLOSEMENU_BUTTON  : "❌"
+BACK_BUTTON : "⬅️"
 UNBAN_BUTTON : "ᴜɴʙᴀɴ ᴀssɪsᴛᴀɴᴛ"
 
 #Lyrics
