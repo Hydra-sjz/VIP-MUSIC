@@ -39,24 +39,28 @@ BUTTONS_HP = [
     [
         InlineKeyboardButton("Acᴛɪᴠᴇ", callback_data="close"),
         InlineKeyboardButton("Adᴍɪɴ", callback_data="close"),
-        InlineKeyboardButton("Auᴛʜ", callback_data="close")
-        ],[
+        InlineKeyboardButton("Auᴛʜ", callback_data="close"),
+    ],
+    [
         InlineKeyboardButton("Aᴅᴠɪᴄᴇ", callback_data="close"),
         InlineKeyboardButton("Aᴘᴘʀᴏᴠᴇ", callback_data="close"),
-        InlineKeyboardButton("B-ʟɪsᴛ", callback_data="close")
-        ],[
+        InlineKeyboardButton("B-ʟɪsᴛ", callback_data="close"),
+    ],
+    [
         InlineKeyboardButton("Boᴛ", callback_data="close"),
         InlineKeyboardButton("Bᴀɴ", callback_data="close"),
-        InlineKeyboardButton("Bᴏᴛs", callback_data="close")
-        ],[
+        InlineKeyboardButton("Bᴏᴛs", callback_data="close"),
+    ],
+    [
         InlineKeyboardButton("Bᴏᴛsᴄʜᴋ", callback_data="close"),
         InlineKeyboardButton("CʜᴀᴛGᴘᴛ", callback_data="close"),
-        InlineKeyboardButton("Deᴠ", callback_data="close")
-        ],[
+        InlineKeyboardButton("Deᴠ", callback_data="close"),
+    ],
+    [
         InlineKeyboardButton("❮", callback_data="close"),
-        InlineKeyboardButton("❌", callback_data="close"), 
-        InlineKeyboardButton("❯", callback_data="close")
-    ]
+        InlineKeyboardButton("❌", callback_data="close"),
+        InlineKeyboardButton("❯", callback_data="close"),
+    ],
 ]
 
 
