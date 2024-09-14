@@ -59,7 +59,7 @@ BUTTONS_HP = [
     [
         InlineKeyboardButton("❮", callback_data="close"),
         InlineKeyboardButton("❌", callback_data="close"),
-        InlineKeyboardButton("❯", callback_data="close"),
+        InlineKeyboardButton("❯", callback_data="clos"),
     ],
 ]
 
@@ -120,7 +120,7 @@ async def abot_cb_handler(bot, query):
 
 
 # ==============CLOSE===================
-@Bot.on_callback_query(filters.regex("^close$"))
+@Bot.on_callback_query(filters.regex("^clos$"))
 async def close_cb(bot, callback):
     await callback.answer("❌Closed the Module❌")
     await callback.message.delete()
