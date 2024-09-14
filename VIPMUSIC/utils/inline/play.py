@@ -253,7 +253,6 @@ import math
 
 from pyrogram.types import InlineKeyboardButton
 
-from VIPMUSIC import app
 from VIPMUSIC.utils.formatters import time_to_seconds
 
 
