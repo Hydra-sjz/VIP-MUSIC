@@ -989,6 +989,7 @@ async def abot_cb_handler(bot, query):
         disable_web_page_preview=True,
     )
 
+
 text_hg = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Hᴜɢ:
 
@@ -1014,6 +1015,7 @@ buttons_hg = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^hg$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -1021,6 +1023,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_hg),
         disable_web_page_preview=True,
     )
+
 
 text_lv = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Lᴏᴠᴇ:
@@ -1035,6 +1038,7 @@ buttons_lv = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^lv$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -1042,6 +1046,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_lv),
         disable_web_page_preview=True,
     )
+
 
 text_mt = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mᴀᴛʜ:
@@ -1082,6 +1087,7 @@ buttons_mt = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^mt$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -1089,6 +1095,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_mt),
         disable_web_page_preview=True,
     )
+
 
 text_mog = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mᴏɴɢᴏᴅʙ:
@@ -1103,6 +1110,7 @@ buttons_mog = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^mog$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -1110,6 +1118,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_mog),
         disable_web_page_preview=True,
     )
+
 
 text_not = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Nᴏᴛᴇs:
@@ -1128,6 +1137,7 @@ buttons_not = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^not$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -1135,6 +1145,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_not),
         disable_web_page_preview=True,
     )
+
 
 text_ps = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Pᴀᴜsᴇ:
@@ -1157,6 +1168,7 @@ buttons_ps = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^ps$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -1164,6 +1176,8 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_ps),
         disable_web_page_preview=True,
     )
+
+
 # =============================================================
 # =============================================================
 
