@@ -169,6 +169,7 @@ async def help_cb_handler(bot, query):
         disable_web_page_preview=True,
     )
 
+
 TEXT_HP4 = """
 Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
@@ -211,6 +212,7 @@ async def help_cb_handler(bot, query):
         disable_web_page_preview=True,
     )
 
+
 TEXT_HP5 = """
 Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
@@ -252,6 +254,7 @@ async def help_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(BUTTONS_HP5),
         disable_web_page_preview=True,
     )
+
 
 # =============================EXTRA_CMD================================
 # =============================EXTRA_CMD================================
@@ -916,6 +919,7 @@ buttons_gdy = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^gdy$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -952,6 +956,7 @@ buttons_hsr = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^hsr$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -975,6 +980,7 @@ buttons_htg = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^htg$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -982,8 +988,11 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_htg),
         disable_web_page_preview=True,
     )
+
+
 # =============================================================
 # =============================================================
+
 
 # ==============CLOSE===================
 @Bot.on_callback_query(filters.regex("^close$"))
