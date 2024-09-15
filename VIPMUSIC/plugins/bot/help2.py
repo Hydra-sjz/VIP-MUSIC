@@ -91,12 +91,12 @@ Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
 BUTTONS_HP2 = [
     [
-        InlineKeyboardButton("Acᴛɪᴠᴇ", callback_data="act"),
-        InlineKeyboardButton("Adᴍɪɴ", callback_data="adm"),
-        InlineKeyboardButton("Auᴛʜ", callback_data="aut"),
+        InlineKeyboardButton("Filters", callback_data="flt"),
+        InlineKeyboardButton("Fɪɢʟᴇᴛ", callback_data="fgl"),
+        InlineKeyboardButton("Fᴀᴋᴇ", callback_data="fk"),
     ],
     [
-        InlineKeyboardButton("Aᴅᴠɪᴄᴇ", callback_data="adv"),
+        InlineKeyboardButton("Fᴏɴᴛ", callback_data="fon"),
         InlineKeyboardButton("Aᴘᴘʀᴏᴠᴇ", callback_data="apr"),
         InlineKeyboardButton("B-ʟɪsᴛ", callback_data="blt"),
     ],
@@ -558,7 +558,101 @@ async def abot_cb_handler(bot, query):
         disable_web_page_preview=True,
     )
 
+text_flt = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Filters:
 
+々 /filters To Get All The Filters In The Chat.
+々 /filter [FILTER_NAME] To Save A Filter(reply to a message).
+
+Supported filter types are Text, Animation, Photo, Document, Video, video notes, Audio, Voice.
+
+To use more words in a filter use.
+々 /filter Hey_there To filter "Hey there".
+
+々 /stop [FILTER_NAME] To Stop A Filter.
+々 /stopall To delete all the filters in a chat (permanently).
+
+You can use markdown or html to save text too.
+
+Checkout /markdownhelp to know more about formattings and other syntax.
+"""
+buttons_flt = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+@Bot.on_callback_query(filters.regex("^flt$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_flt,
+        reply_markup=InlineKeyboardMarkup(buttons_flt),
+        disable_web_page_preview=True,
+    )
+
+
+text_fgl = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Fɪɢʟᴇᴛ:
+
+々 /figlet  - ᴄʀᴇᴀᴛᴇs ᴀ ғɪɢʟᴇᴛ ᴏғ ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ.
+"""
+buttons_fgl = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+@Bot.on_callback_query(filters.regex("^fgl$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_fgl,
+        reply_markup=InlineKeyboardMarkup(buttons_fgl),
+        disable_web_page_preview=True,
+    )
+
+
+text_fk = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Fᴀᴋᴇ:
+
+々 /fake [ᴄᴏᴜɴᴛʀʏ ɴᴀᴍᴇ ] - ᴛᴏ ɢᴇᴛ ʀᴀɴᴅᴏᴍ ᴀᴅᴅʀᴇss
+"""
+buttons_fk = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+@Bot.on_callback_query(filters.regex("^fk$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_fk,
+        reply_markup=InlineKeyboardMarkup(buttons_fk),
+        disable_web_page_preview=True,
+    )
+
+
+text_fon = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Fᴏɴᴛ:
+
+々 /font [text] - ᴄᴏɴᴠᴇʀᴛs sɪᴍᴩʟᴇ ᴛᴇxᴛ ᴛᴏ ʙᴇᴀᴜᴛɪғᴜʟ ᴛᴇxᴛ ʙʏ ᴄʜᴀɴɢɪɴɢ ɪᴛ's ғᴏɴᴛ.
+"""
+buttons_fon = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+@Bot.on_callback_query(filters.regex("^fon$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_fon,
+        reply_markup=InlineKeyboardMarkup(buttons_fon),
+        disable_web_page_preview=True,
+    )
 # =============================================================
 # =============================================================
 # =============================================================
