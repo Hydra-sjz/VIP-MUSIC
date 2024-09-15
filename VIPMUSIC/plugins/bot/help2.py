@@ -64,6 +64,8 @@ BUTTONS_HP = [
         InlineKeyboardButton("❯", callback_data="settings2"),
     ],
 ]
+
+
 @Bot.on_message(filters.command("help2") & filters.private)
 async def hp_handler(bot, message):
     await message.reply_text(
@@ -71,6 +73,7 @@ async def hp_handler(bot, message):
         reply_markup=InlineKeyboardMarkup(BUTTONS_HP),
         quote=True,
     )
+
 
 @Bot.on_callback_query(filters.regex("^settings$"))
 async def help_cb_handler(bot, query):
@@ -113,6 +116,8 @@ BUTTONS_HP2 = [
         InlineKeyboardButton("❯", callback_data="settings3"),
     ],
 ]
+
+
 @Bot.on_callback_query(filters.regex("^settings2$"))
 async def help_cb_handler(bot, query):
     await query.message.edit(
@@ -154,6 +159,8 @@ BUTTONS_HP3 = [
         InlineKeyboardButton("❯", callback_data="settings4"),
     ],
 ]
+
+
 @Bot.on_callback_query(filters.regex("^settings3$"))
 async def help_cb_handler(bot, query):
     await query.message.edit(
@@ -195,6 +202,8 @@ BUTTONS_HP4 = [
         InlineKeyboardButton("❯", callback_data="setting5"),
     ],
 ]
+
+
 @Bot.on_callback_query(filters.regex("^settings4$"))
 async def help_cb_handler(bot, query):
     await query.message.edit(
@@ -236,6 +245,8 @@ BUTTONS_HP5 = [
         InlineKeyboardButton("❯", callback_data="settings"),
     ],
 ]
+
+
 @Bot.on_callback_query(filters.regex("^settings5$"))
 async def help_cb_handler(bot, query):
     await query.message.edit(
@@ -265,6 +276,8 @@ buttons_act = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^act$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -298,6 +311,8 @@ buttons_adm = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^adm$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -324,6 +339,8 @@ buttons_aut = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^aut$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -345,6 +362,8 @@ buttons_adv = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^adv$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -375,6 +394,8 @@ buttons_apr = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^apr$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -405,6 +426,8 @@ buttons_blt = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^blt$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -442,6 +465,8 @@ buttons_bt = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^bt$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -486,6 +511,8 @@ buttons_bn = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^bn$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -508,6 +535,8 @@ buttons_bts = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^bts$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -547,6 +576,8 @@ buttons_bsk = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^bsk$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -570,6 +601,8 @@ buttons_ai = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^ai$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -601,6 +634,8 @@ buttons_dv = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^dv$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -634,6 +669,8 @@ buttons_flt = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^flt$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -654,6 +691,8 @@ buttons_fgl = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^fgl$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -674,6 +713,8 @@ buttons_fk = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^fk$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -694,6 +735,8 @@ buttons_fon = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^fon$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -722,6 +765,8 @@ buttons_fn = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^fn$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -755,6 +800,8 @@ buttons_gt = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^gt$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -776,6 +823,8 @@ buttons_gl = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^gl$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -805,6 +854,8 @@ buttons_gli = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^gli$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -825,6 +876,8 @@ buttons_src = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^src$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -865,6 +918,8 @@ buttons_gdy = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^gdy$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -900,6 +955,8 @@ buttons_hsr = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^hsr$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -922,6 +979,8 @@ buttons_htg = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
+
 @Bot.on_callback_query(filters.regex("^htg$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -933,6 +992,7 @@ async def abot_cb_handler(bot, query):
 
 # =============================================================
 # =============================================================
+
 
 # ==============CLOSE===================
 @Bot.on_callback_query(filters.regex("^close$"))
