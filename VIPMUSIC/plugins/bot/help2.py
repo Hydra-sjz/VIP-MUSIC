@@ -558,6 +558,7 @@ async def abot_cb_handler(bot, query):
         disable_web_page_preview=True,
     )
 
+
 text_flt = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Filters:
 
@@ -583,6 +584,7 @@ buttons_flt = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^flt$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -603,6 +605,7 @@ buttons_fgl = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
 
 @Bot.on_callback_query(filters.regex("^fgl$"))
 async def abot_cb_handler(bot, query):
@@ -625,6 +628,7 @@ buttons_fk = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^fk$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -646,6 +650,7 @@ buttons_fon = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^fon$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -653,6 +658,8 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_fon),
         disable_web_page_preview=True,
     )
+
+
 # =============================================================
 # =============================================================
 # =============================================================
