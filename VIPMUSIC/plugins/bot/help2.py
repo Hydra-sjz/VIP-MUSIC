@@ -144,13 +144,13 @@ BUTTONS_HP3 = [
         InlineKeyboardButton("Pᴀᴜsᴇ", callback_data="ps"),
     ],
     [
-        InlineKeyboardButton("Boᴛ", callback_data="bt"),
-        InlineKeyboardButton("Bᴀɴ", callback_data="bn"),
-        InlineKeyboardButton("Bᴏᴛs", callback_data="bts"),
+        InlineKeyboardButton("Plᴀʏ", callback_data="ply"),
+        InlineKeyboardButton("SᴀɴɢMᴀᴛᴀ", callback_data="sg"),
+        InlineKeyboardButton("Pʏᴘɪ", callback_data="pyp"),
     ],
     [
-        InlineKeyboardButton("Bᴏᴛsᴄʜᴋ", callback_data="bsk"),
-        InlineKeyboardButton("Cʜᴀᴛ Ai", callback_data="ai"),
+        InlineKeyboardButton("Pʟᴀʏʟɪsᴛ", callback_data="pay"),
+        InlineKeyboardButton("Qʀɢᴇɴ", callback_data="qr"),
         InlineKeyboardButton("Deᴠ", callback_data="dv"),
     ],
     [
@@ -1037,8 +1037,6 @@ buttons_lv = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
-
-
 @Bot.on_callback_query(filters.regex("^lv$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -1051,10 +1049,7 @@ async def abot_cb_handler(bot, query):
 text_mt = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mᴀᴛʜ:
 
-
-## Mᴀᴛʜ Cᴏᴍᴍᴀɴᴅ Hᴇᴘ
-
-### 1. /ᴍᴀᴛʜ [ᴇxᴘʀᴇssɪᴏɴ]
+1. /ᴍᴀᴛʜ [ᴇxᴘʀᴇssɪᴏɴ]
 Dᴇsᴄʀɪᴘᴛɪᴏɴ:
 Cᴀᴄᴜᴀᴛᴇs ᴛʜᴇ ʀᴇsᴜᴛ ᴏғ ᴀ ᴍᴀᴛʜᴇᴍᴀᴛɪᴄᴀ ᴇxᴘʀᴇssɪᴏɴ.
 
@@ -1066,9 +1061,9 @@ Dᴇᴛᴀɪs:
 - Rᴇᴛᴜʀɴs ᴛʜᴇ ʀᴇsᴜᴛ ᴏғ ᴛʜᴇ ᴇxᴘʀᴇssɪᴏɴ.
 - Dɪsᴘᴀʏs "Iɴᴠᴀɪᴅ ᴇxᴘʀᴇssɪᴏɴ" ɪғ ᴛʜᴇ ᴇxᴘʀᴇssɪᴏɴ ɪs ɴᴏᴛ ᴠᴀɪᴅ.
 
-## Gᴏᴏɢᴇ Sᴇᴀʀᴄʜ Cᴏᴍᴍᴀɴᴅ Hᴇᴘ
+Gᴏᴏɢᴇ Sᴇᴀʀᴄʜ Cᴏᴍᴍᴀɴᴅ Hᴇᴘ
 
-### 1. /sᴘɢ [ǫᴜᴇʀʏ]
+1. /sᴘɢ [ǫᴜᴇʀʏ]
 Dᴇsᴄʀɪᴘᴛɪᴏɴ:
 Sᴇᴀʀᴄʜᴇs Gᴏᴏɢᴇ ᴀɴᴅ ᴅɪsᴘᴀʏs sᴇᴀʀᴄʜ ʀᴇsᴜᴛs.
 
@@ -1086,8 +1081,6 @@ buttons_mt = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
-
-
 @Bot.on_callback_query(filters.regex("^mt$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -1095,7 +1088,6 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_mt),
         disable_web_page_preview=True,
     )
-
 
 text_mog = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mᴏɴɢᴏᴅʙ:
@@ -1109,8 +1101,6 @@ buttons_mog = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
-
-
 @Bot.on_callback_query(filters.regex("^mog$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -1136,8 +1126,6 @@ buttons_not = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
-
-
 @Bot.on_callback_query(filters.regex("^not$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -1145,8 +1133,7 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_not),
         disable_web_page_preview=True,
     )
-
-
+    
 text_ps = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Pᴀᴜsᴇ:
 
@@ -1167,8 +1154,6 @@ buttons_ps = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
-
-
 @Bot.on_callback_query(filters.regex("^ps$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -1177,10 +1162,146 @@ async def abot_cb_handler(bot, query):
         disable_web_page_preview=True,
     )
 
+text_ply = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Plᴀʏ:
 
+★ ᴘʟᴀʏ , ᴠᴘʟᴀʏ , ᴄᴘʟᴀʏ - Aᴠᴀɪʟᴀʙʟᴇ Cᴏᴍᴍᴀɴᴅs
+★ ᴘʟᴀʏғᴏʀᴄᴇ , ᴠᴘʟᴀʏғᴏʀᴄᴇ , ᴄᴘʟᴀʏғᴏʀᴄᴇ - FᴏʀᴄᴇPʟᴀʏ Cᴏᴍᴍᴀɴᴅs
+
+- c sᴛᴀɴᴅs ғᴏʀ ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ.
+- v sᴛᴀɴᴅs ғᴏʀ ᴠɪᴅᴇᴏ ᴘʟᴀʏ.
+- force sᴛᴀɴᴅs ғᴏʀ ғᴏʀᴄᴇ ᴘʟᴀʏ.
+
+々 /play ᴏʀ /vplay ᴏʀ /cplay - Bᴏᴛ ᴡɪʟʟ sᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ ʏᴏᴜʀ ɢɪᴠᴇɴ ǫᴜᴇʀʏ ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴏʀ Sᴛʀᴇᴀᴍ ʟɪᴠᴇ ʟɪɴᴋs ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛs.
+
+々 /playforce ᴏʀ /vplayforce ᴏʀ /cplayforce - Fᴏʀᴄᴇ Pʟᴀʏ sᴛᴏᴘs ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴘʟᴀʏɪɴɢ ᴛʀᴀᴄᴋ ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴀɴᴅ sᴛᴀʀᴛs ᴘʟᴀʏɪɴɢ ᴛʜᴇ sᴇᴀʀᴄʜᴇᴅ ᴛʀᴀᴄᴋ ɪɴsᴛᴀɴᴛʟʏ ᴡɪᴛʜᴏᴜᴛ ᴅɪsᴛᴜʀʙɪɴɢ/ᴄʟᴇᴀʀɪɴɢ ǫᴜᴇᴜᴇ.
+
+々 /channelplay [Cʜᴀᴛ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ɪᴅ] ᴏʀ [Dɪsᴀʙʟᴇ] - Cᴏɴɴᴇᴄᴛ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴀ ɢʀᴏᴜᴘ ᴀɴᴅ sᴛʀᴇᴀᴍ ᴍᴜsɪᴄ ᴏɴ ᴄʜᴀɴɴᴇʟ's ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ғʀᴏᴍ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
+"""
+buttons_ply = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^ply$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_ply,
+        reply_markup=InlineKeyboardMarkup(buttons_ply),
+        disable_web_page_preview=True,
+    )
+
+text_sg = """
+Hᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ғᴏʀ SᴀɴɢMᴀᴛᴀ:
+
+Tʜɪs ғᴇᴀᴛᴜʀᴇ ɪɴsᴘɪʀᴇᴅ ғʀᴏᴍ SᴀɴɢMᴀᴛᴀ Bᴏᴛ. I'ᴍ ᴄʀᴇᴀᴛᴇᴅ sɪᴍᴘʟᴇ ᴅᴇᴛᴇᴄᴛɪᴏɴ ᴛᴏ ᴄʜᴇᴄᴋ ᴜsᴇʀ ᴅᴀᴛᴀ ɪɴᴄʟᴜᴅᴇ ᴜsᴇʀɴᴀᴍᴇ, ғɪʀsᴛ_ɴᴀᴍᴇ, ᴀɴᴅ ʟᴀsᴛ_ɴᴀᴍᴇ.
+々 /sangmata_set [ᴏɴ/ᴏғғ] - Eɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ sᴀɴɢᴍᴀᴛᴀ ɪɴ ɢʀᴏᴜᴘs.
+"""
+buttons_sg = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^sg$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_sg,
+        reply_markup=InlineKeyboardMarkup(buttons_sg),
+        disable_web_page_preview=True,
+    )
+
+text_pyp = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Pʏᴘɪ:
+
+ᴄᴏᴍᴍᴀɴᴅs:
+々 /pypi : Get details about a specified Python package from PyPI.
+
+**ɪɴғᴏ:**
+ᴛʜɪs ᴍᴏᴅᴜʟᴇ ᴀʟʟᴏᴡs ᴜsᴇʀs ᴛᴏ ғᴇᴛᴄʜ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴘʏᴛʜᴏɴ ᴘᴀᴄᴋᴀɢᴇs ғʀᴏᴍ ᴘʏᴘɪ, ɪɴᴄʟᴜᴅɪɴɢ ᴛʜᴇ ᴘᴀᴄᴋᴀɢᴇ ɴᴀᴍᴇ, ʟᴀᴛᴇsᴛ ᴠᴇʀsɪᴏɴ, ᴅᴇsᴄʀɪᴘᴛɪᴏɴ, ᴀɴᴅ ᴘʀᴏᴊᴇᴄᴛ ᴜʀʟ.
+
+**ɴᴏᴛᴇ:**
+ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴠᴀʟɪᴅ ᴘᴀᴄᴋᴀɢᴇ ɴᴀᴍᴇ ᴀғᴛᴇʀ ᴛʜᴇ /pypi ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ʀᴇᴛʀɪᴇᴠᴇ ᴘᴀᴄᴋᴀɢᴇ ᴅᴇᴛᴀɪʟs.
+"""
+buttons_pyp = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^pyp$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_pyp,
+        reply_markup=InlineKeyboardMarkup(buttons_pyp),
+        disable_web_page_preview=True,
+    )
+
+text_pay = """
+PʟᴀʏʟɪsᴛHᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Pʟᴀʏʟɪsᴛ:
+
+Pʟᴀʏʟɪsᴛ Fᴇᴀᴛᴜʀᴇ Fᴏʀ ʏᴏᴜ.
+々 /payist » sʜᴏᴡ ʏᴏᴜʀ ᴘʟᴀʏʟɪsᴛ
+々 /addpayist » [sᴏɴɢ ɴᴀᴍᴇ , sᴏɴɢ ʟɪɴᴋ, ʏᴏᴜᴛᴜʙᴇ ᴘʟᴀʏʟɪsᴛ ʟɪɴᴋ]
+々 /drpayist » ᴅᴇʟᴇᴛᴇ ᴀɴʏ sᴏɴɢ ɪɴ ʏᴏᴜʀ ᴘʟᴀʏʟɪsᴛ.
+々 /deeteapayist » ᴅᴇʟᴇᴛᴇ ᴀʟʟ sᴏɴɢ ɪɴ ʏᴏᴜʀ ᴘʟᴀʏʟɪsᴛ.
+々 /paypayist » ᴘʟᴀʏ ʏᴏᴜʀ ᴘʟᴀʏʟɪsᴛ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ɪɴ ᴀᴜᴅɪᴏ.
+々 /vpaypayist  » ᴘʟᴀʏ ʏᴏᴜʀ ᴘʟᴀʏʟɪsᴛ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ɪɴ ᴠɪᴅᴇᴏ.
+"""
+buttons_pay = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^pay$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_pay,
+        reply_markup=InlineKeyboardMarkup(buttons_pay),
+        disable_web_page_preview=True,
+    )
+
+text_qr = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Qʀɢᴇɴ:
+
+Ƭʜɪs ᴍᴏᴅᴜʟᴇ ɢᴇɴᴇʀᴀᴛᴇs Qʀ ᴄᴏᴅᴇs. Usᴇ ᴛʜᴇ /qr ᴄᴏᴍᴍᴀɴᴅ ғᴏʟʟᴏᴡᴇᴅ ʙʏ ᴛʜᴇ ᴛᴇxᴛ ᴏʀ URL ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴇɴᴄᴏᴅᴇ ɪɴᴛᴏ ᴀ Qʀ ᴄᴏᴅᴇ. Fᴏʀ ᴇxᴀᴍᴘʟᴇ, /qr https://t.me/vivekkumar07089. Tʜᴇ ʙᴏᴛ ᴡɪʟʟ ᴛʜᴇɴ ɢᴇɴᴇʀᴀᴛᴇ ᴀ Qʀ ᴄᴏᴅᴇ ғᴏʀ ᴛʜᴇ ᴘʀᴏᴠɪᴅᴇᴅ ɪɴᴘᴜᴛ. Mᴀᴋᴇ sᴜʀᴇ ᴛᴏ ɪɴᴄʟᴜᴅᴇ ᴛʜᴇ ᴘʀᴏᴛᴏᴄᴏʟ (http:// ᴏʀ https://) ғᴏʀ URLs. Eɴᴊᴏʏ ᴄʀᴇᴀᴛɪɴɢ Qʀ ᴄᴏᴅᴇs ᴡɪᴛʜ ᴇᴀsᴇ!
+"""
+buttons_qr = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^qr$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_qr,
+        reply_markup=InlineKeyboardMarkup(buttons_qr),
+        disable_web_page_preview=True,
+    )
+
+text_qz = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Qᴜɪᴢ:
+
+々 /quiz - ᴛᴏ ɢᴇᴛ ᴀɴ ʀᴀɴᴅᴏᴍ ǫᴜɪᴢ
+"""
+buttons_qz = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+@Bot.on_callback_query(filters.regex("^qz$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_qz,
+        reply_markup=InlineKeyboardMarkup(buttons_qz),
+        disable_web_page_preview=True,
+    )
 # =============================================================
 # =============================================================
-
 
 # ==============CLOSE===================
 @Bot.on_callback_query(filters.regex("^close$"))
