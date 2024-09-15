@@ -97,13 +97,13 @@ BUTTONS_HP2 = [
     ],
     [
         InlineKeyboardButton("Fᴏɴᴛ", callback_data="fon"),
-        InlineKeyboardButton("Aᴘᴘʀᴏᴠᴇ", callback_data="apr"),
-        InlineKeyboardButton("B-ʟɪsᴛ", callback_data="blt"),
+        InlineKeyboardButton("Fᴜɴ", callback_data="fn"),
+        InlineKeyboardButton("G-ᴄᴀsᴛ", callback_data="gt"),
     ],
     [
-        InlineKeyboardButton("Boᴛ", callback_data="bt"),
-        InlineKeyboardButton("Bᴀɴ", callback_data="bn"),
-        InlineKeyboardButton("Bᴏᴛs", callback_data="bts"),
+        InlineKeyboardButton("Gʀᴏᴜᴘ Lɪɴᴋ", callback_data="gl"),
+        InlineKeyboardButton("Gᴀʟɪ", callback_data="gli"),
+        InlineKeyboardButton("sᴇᴀʀᴄʜ", callback_data="src"),
     ],
     [
         InlineKeyboardButton("Bᴏᴛsᴄʜᴋ", callback_data="bsk"),
@@ -659,11 +659,143 @@ async def abot_cb_handler(bot, query):
         disable_web_page_preview=True,
     )
 
+text_fn = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Fᴜɴ:
 
-# =============================================================
-# =============================================================
-# =============================================================
+ʜᴀᴠɪɴɢ ꜰᴜɴ:
+々 /dice: Rᴏʟʟs ᴀ ᴅɪᴄᴇ.
+々 /ludo: Pʟᴀʏ Lᴜᴅᴏ.
+々 /dart: Tʜʀᴏᴡs ᴀ ᴅᴀʀᴛ.
+々 /basket ᴏʀ /basketball: Pʟᴀʏs ʙᴀsᴋᴇᴛʙᴀʟʟ.
+々 /football: Pʟᴀʏs ғᴏᴏᴛʙᴀʟʟ.
+々 /slot ᴏʀ /jackpot: Pʟᴀʏs ᴊᴀᴄᴋᴘᴏᴛ.
+々 /bowling: Pʟᴀʏs ʙᴏᴡʟɪɴɢ.
+々 /bored: Gᴇᴛs ʀᴀɴᴅᴏᴍ ᴀᴄᴛɪᴠɪᴛʏ ɪғ ʏᴏᴜ'ʀᴇ ʙᴏʀᴇᴅ.
+"""
+buttons_fn = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
 
+@Bot.on_callback_query(filters.regex("^fn$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_fn,
+        reply_markup=InlineKeyboardMarkup(buttons_fn),
+        disable_web_page_preview=True,
+    )
+
+
+text_gt = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ G-ᴄᴀsᴛ:
+
+々 /broadcast [ᴍᴇssᴀɢᴇ ᴏʀ ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ] » ʙʀᴏᴀᴅᴄᴀsᴛ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ sᴇʀᴠᴇᴅ ᴄʜᴀᴛs ᴏғ ᴛʜᴇ ʙᴏᴛ.
+ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ ᴍᴏᴅᴇs:
+
+-pin » ᴩɪɴs ʏᴏᴜʀ ʙʀᴏᴀᴅᴄᴀsᴛᴇᴅ ᴍᴇssᴀɢᴇs ɪɴ sᴇʀᴠᴇᴅ ᴄʜᴀᴛs.
+
+-pinloud » ᴩɪɴs ʏᴏᴜʀ ʙʀᴏᴀᴅᴄᴀsᴛᴇᴅ ᴍᴇssᴀɢᴇ ɪɴ sᴇʀᴠᴇᴅ ᴄʜᴀᴛs ᴀɴᴅ sᴇɴᴅ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴛᴏ ᴛʜᴇ ᴍᴇᴍʙᴇʀs.
+
+-user » ʙʀᴏᴀᴅᴄᴀsᴛs ᴛʜᴇ ᴍᴇssᴀɢᴇ ᴛᴏ ᴛʜᴇ ᴜsᴇʀs ᴡʜᴏ ʜᴀᴠᴇ sᴛᴀʀᴛᴇᴅ ʏᴏᴜʀ ʙᴏᴛ.
+
+-assistant » ʙʀᴏᴀᴅᴄᴀsᴛ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ ғʀᴏᴍ ᴛʜᴇ ᴀssɪᴛᴀɴᴛ ᴀᴄᴄᴏᴜɴᴛ ᴏғ ᴛʜᴇ ʙᴏᴛ.
+
+-nobot » ғᴏʀᴄᴇs ᴛʜᴇ ʙᴏᴛ ᴛᴏ ɴᴏᴛ ʙʀᴏᴀᴅᴄᴀsᴛ ᴛʜᴇ ᴍᴇssᴀɢᴇ.
+
+ᴇxᴀᴍᴩʟᴇ: /broadcast -user -assistant -pin ᴛᴇsᴛɪɴɢ ʙʀᴏᴀᴅᴄᴀsᴛ
+"""
+buttons_gt = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+@Bot.on_callback_query(filters.regex("^gt$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_gt,
+        reply_markup=InlineKeyboardMarkup(buttons_gt),
+        disable_web_page_preview=True,
+    )
+
+
+text_gl = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Gʀᴏᴜᴘ Lɪɴᴋ:
+
+々 /ɢɪᴠᴇɪɴᴋ: Gᴇᴛ ᴛʜᴇ ɪɴᴠɪᴛᴇ ɪɴᴋ ғᴏʀ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴄʜᴀᴛ.
+々 /ɪɴᴋ ɢʀᴏᴜᴘ_ɪᴅ: Gᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀɴᴅ ɢᴇɴᴇʀᴀᴛᴇ ᴀɴ ɪɴᴠɪᴛᴇ ɪɴᴋ ғᴏʀ ᴛʜᴇ sᴘᴇᴄɪғɪᴇᴅ ɢʀᴏᴜᴘ ID.
+"""
+buttons_gl = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+@Bot.on_callback_query(filters.regex("^gl$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_gl,
+        reply_markup=InlineKeyboardMarkup(buttons_gl),
+        disable_web_page_preview=True,
+    )
+
+
+text_gli = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Gᴀʟɪ:
+
+Tʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪs ᴏɴʏ ғᴏʀ Pʀɪᴠᴀᴛᴇ ᴍᴇssᴀɢᴇ, Gᴏ Tᴏ Bᴏᴛ Pʀɪᴠᴀᴛᴇ Mᴇssᴀɢᴇ Aɴᴅ Tʏᴘᴇ /gai Cᴏᴍᴍᴀɴᴅ.
+
+Fᴇᴀᴛᴜʀᴇs:
+- Pʀᴏᴠɪᴅᴇs ʀᴀɴᴅᴏᴍ ᴀʙᴜsɪᴠᴇ ᴀɴɢᴜᴀɢᴇ (ɢᴀɪ) ᴡʜᴇɴ ᴜsᴇᴅ ɪɴ DMs.
+- Dɪsᴘᴀʏs ᴀ ᴍᴇssᴀɢᴇ ɪɴᴅɪᴄᴀᴛɪɴɢ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ ɪs ᴏɴʏ ғᴏʀ ᴘʀɪᴠᴀᴛᴇ ᴍᴇssᴀɢᴇs ᴡʜᴇɴ ᴜsᴇᴅ ɪɴ ɢʀᴏᴜᴘs.
+
+Cᴏᴍᴍᴀɴᴅ:
+ /gai : Sᴇɴᴅs ᴀ ʀᴀɴᴅᴏᴍ ᴀʙᴜsɪᴠᴇ ᴀɴɢᴜᴀɢᴇ (ɢᴀɪ) ᴡʜᴇɴ ᴜsᴇᴅ ɪɴ DMs.
+
+Nᴏᴛᴇ: Tʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪs ʀᴇsᴛʀɪᴄᴛᴇᴅ ᴛᴏ ᴘʀɪᴠᴀᴛᴇ ᴍᴇssᴀɢᴇs ᴏɴʏ ᴛᴏ ᴍᴀɪɴᴛᴀɪɴ ᴅᴇᴄᴏʀᴜᴍ ɪɴ ɢʀᴏᴜᴘ ᴄʜᴀᴛs.
+"""
+buttons_gli = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+@Bot.on_callback_query(filters.regex("^gli$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_gli,
+        reply_markup=InlineKeyboardMarkup(buttons_gli),
+        disable_web_page_preview=True,
+    )
+
+
+text_src = """
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Gᴏᴏɢʟᴇ:
+々 /google [ǫᴜᴇʀʏ] - ᴛᴏ sᴇᴀʀᴄʜ ᴏɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ɢᴇᴛ ʀᴇsᴜʟᴛs
+々 /app | /apps [ᴀᴘᴘ ɴᴀᴍᴇ] - ᴛᴏ ɢᴇᴛ ᴀᴘᴘ ɪɴғᴏ ᴛʜᴀᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴘʟᴀʏsᴛᴏʀᴇ
+"""
+buttons_src = [
+    [
+        InlineKeyboardButton("⬅️", callback_data="settings"),
+        InlineKeyboardButton("❌", callback_data="close"),
+    ]
+]
+
+@Bot.on_callback_query(filters.regex("^src$"))
+async def abot_cb_handler(bot, query):
+    await query.message.edit(
+        text=text_src,
+        reply_markup=InlineKeyboardMarkup(buttons_src),
+        disable_web_page_preview=True,
+    )
+# =============================================================
+# =============================================================
+# =============================================================
 
 # ==============CLOSE===================
 @Bot.on_callback_query(filters.regex("^close$"))
