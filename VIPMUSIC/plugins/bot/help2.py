@@ -18,8 +18,6 @@ BUTTONS_ST = [
     ],
     [InlineKeyboardButton("❌", callback_data="close")],
 ]
-
-
 @Bot.on_callback_query(filters.regex("^home$"))
 async def st_cb_handler(bot, query):
     await query.message.edit(
@@ -28,9 +26,6 @@ async def st_cb_handler(bot, query):
         disable_web_page_preview=True,
     )
 
-
-# ==============================MAIN_HELP_CMD====================
-# ==============================MAIN_HELP_CMD====================
 # ==============================MAIN_HELP_CMD====================
 TEXT_HP = """
 Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
@@ -64,8 +59,6 @@ BUTTONS_HP = [
         InlineKeyboardButton("❯", callback_data="settings2"),
     ],
 ]
-
-
 @Bot.on_message(filters.command("help2") & filters.private)
 async def hp_handler(bot, message):
     await message.reply_text(
@@ -73,8 +66,6 @@ async def hp_handler(bot, message):
         reply_markup=InlineKeyboardMarkup(BUTTONS_HP),
         quote=True,
     )
-
-
 @Bot.on_callback_query(filters.regex("^settings$"))
 async def help_cb_handler(bot, query):
     await query.message.edit(
@@ -82,8 +73,6 @@ async def help_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(BUTTONS_HP),
         disable_web_page_preview=True,
     )
-
-
 TEXT_HP2 = """
 Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
@@ -116,8 +105,6 @@ BUTTONS_HP2 = [
         InlineKeyboardButton("❯", callback_data="settings3"),
     ],
 ]
-
-
 @Bot.on_callback_query(filters.regex("^settings2$"))
 async def help_cb_handler(bot, query):
     await query.message.edit(
@@ -159,8 +146,6 @@ BUTTONS_HP3 = [
         InlineKeyboardButton("❯", callback_data="settings4"),
     ],
 ]
-
-
 @Bot.on_callback_query(filters.regex("^settings3$"))
 async def help_cb_handler(bot, query):
     await query.message.edit(
@@ -168,8 +153,6 @@ async def help_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(BUTTONS_HP3),
         disable_web_page_preview=True,
     )
-
-
 TEXT_HP4 = """
 Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
@@ -177,19 +160,19 @@ Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: /
 """
 BUTTONS_HP4 = [
     [
-        InlineKeyboardButton("Acᴛɪᴠᴇ", callback_data="act"),
-        InlineKeyboardButton("Adᴍɪɴ", callback_data="adm"),
-        InlineKeyboardButton("Auᴛʜ", callback_data="aut"),
+        InlineKeyboardButton("Qᴜᴏᴛᴇ", callback_data="quo"),
+        InlineKeyboardButton("Rᴀᴅɪᴏ", callback_data="rd"),
+        InlineKeyboardButton("Resume", callback_data="rsm"),
     ],
     [
-        InlineKeyboardButton("Aᴅᴠɪᴄᴇ", callback_data="adv"),
-        InlineKeyboardButton("Aᴘᴘʀᴏᴠᴇ", callback_data="apr"),
-        InlineKeyboardButton("B-ʟɪsᴛ", callback_data="blt"),
+        InlineKeyboardButton("Rᴇᴘᴏ", callback_data="rep"),
+        InlineKeyboardButton("Speed", callback_data="spd"),
+        InlineKeyboardButton("Tag", callback_data="tag"),
     ],
     [
-        InlineKeyboardButton("Boᴛ", callback_data="bt"),
-        InlineKeyboardButton("Bᴀɴ", callback_data="bn"),
-        InlineKeyboardButton("Bᴏᴛs", callback_data="bts"),
+        InlineKeyboardButton("Sʟᴀᴘ", callback_data="sl"),
+        InlineKeyboardButton("Sᴛɪᴄᴋᴇʀ", callback_data="stk"),
+        InlineKeyboardButton("Tʀᴜᴛʜ", callback_data="trt"),
     ],
     [
         InlineKeyboardButton("Bᴏᴛsᴄʜᴋ", callback_data="bsk"),
@@ -202,8 +185,6 @@ BUTTONS_HP4 = [
         InlineKeyboardButton("❯", callback_data="setting5"),
     ],
 ]
-
-
 @Bot.on_callback_query(filters.regex("^settings4$"))
 async def help_cb_handler(bot, query):
     await query.message.edit(
@@ -211,8 +192,6 @@ async def help_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(BUTTONS_HP4),
         disable_web_page_preview=True,
     )
-
-
 TEXT_HP5 = """
 Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
