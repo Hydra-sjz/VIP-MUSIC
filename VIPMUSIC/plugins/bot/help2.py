@@ -659,6 +659,7 @@ async def abot_cb_handler(bot, query):
         disable_web_page_preview=True,
     )
 
+
 text_fn = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Fᴜɴ:
 
@@ -678,6 +679,7 @@ buttons_fn = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
 
 @Bot.on_callback_query(filters.regex("^fn$"))
 async def abot_cb_handler(bot, query):
@@ -713,6 +715,7 @@ buttons_gt = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^gt$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -734,6 +737,7 @@ buttons_gl = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
 
 @Bot.on_callback_query(filters.regex("^gl$"))
 async def abot_cb_handler(bot, query):
@@ -765,6 +769,7 @@ buttons_gli = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^gli$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -786,6 +791,7 @@ buttons_src = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^src$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -793,9 +799,12 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_src),
         disable_web_page_preview=True,
     )
+
+
 # =============================================================
 # =============================================================
 # =============================================================
+
 
 # ==============CLOSE===================
 @Bot.on_callback_query(filters.regex("^close$"))
