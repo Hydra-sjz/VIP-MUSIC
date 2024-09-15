@@ -1,4 +1,4 @@
-from pyrogram import enums, filters
+from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from VIPMUSIC import app as Bot
@@ -29,9 +29,9 @@ async def st_cb_handler(bot, query):
     )
 
 
-#==============================MAIN_HELP_CMD====================
-#==============================MAIN_HELP_CMD====================
-#==============================MAIN_HELP_CMD====================
+# ==============================MAIN_HELP_CMD====================
+# ==============================MAIN_HELP_CMD====================
+# ==============================MAIN_HELP_CMD====================
 TEXT_HP = """
 Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
@@ -73,6 +73,8 @@ async def hp_handler(bot, message):
         reply_markup=InlineKeyboardMarkup(BUTTONS_HP),
         quote=True,
     )
+
+
 @Bot.on_callback_query(filters.regex("^settings$"))
 async def help_cb_handler(bot, query):
     await query.message.edit(
@@ -80,6 +82,7 @@ async def help_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(BUTTONS_HP),
         disable_web_page_preview=True,
     )
+
 
 TEXT_HP2 = """
 Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
@@ -123,6 +126,7 @@ async def help_cb_handler(bot, query):
         disable_web_page_preview=True,
     )
 
+
 TEXT_HP3 = """
 Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ. Iғ ʏᴏᴜ'ʀᴇ ғᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ  ʏᴏᴜ ᴄᴀɴ ᴀsᴋ ɪɴ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ.
 
@@ -165,8 +169,9 @@ async def help_cb_handler(bot, query):
         disable_web_page_preview=True,
     )
 
-#=============================EXTRA_CMD================================
-#=============================EXTRA_CMD================================
+
+# =============================EXTRA_CMD================================
+# =============================EXTRA_CMD================================
 
 text_act = """
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Acᴛɪᴠᴇ:
@@ -185,6 +190,7 @@ buttons_act = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
 
 @Bot.on_callback_query(filters.regex("^act$"))
 async def abot_cb_handler(bot, query):
@@ -220,6 +226,7 @@ buttons_adm = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^adm$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -247,6 +254,7 @@ buttons_aut = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^aut$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -268,6 +276,7 @@ buttons_adv = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
 
 @Bot.on_callback_query(filters.regex("^adv$"))
 async def abot_cb_handler(bot, query):
@@ -300,6 +309,7 @@ buttons_apr = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^apr$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -330,6 +340,7 @@ buttons_blt = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
 
 @Bot.on_callback_query(filters.regex("^blt$"))
 async def abot_cb_handler(bot, query):
@@ -368,6 +379,7 @@ buttons_bt = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
 
 @Bot.on_callback_query(filters.regex("^bt$"))
 async def abot_cb_handler(bot, query):
@@ -414,6 +426,7 @@ buttons_bn = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^bn$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -436,6 +449,7 @@ buttons_bts = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
 
 @Bot.on_callback_query(filters.regex("^bts$"))
 async def abot_cb_handler(bot, query):
@@ -477,6 +491,7 @@ buttons_bsk = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^bsk$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -500,6 +515,7 @@ buttons_ai = [
         InlineKeyboardButton("❌", callback_data="close"),
     ]
 ]
+
 
 @Bot.on_callback_query(filters.regex("^ai$"))
 async def abot_cb_handler(bot, query):
@@ -533,6 +549,7 @@ buttons_dv = [
     ]
 ]
 
+
 @Bot.on_callback_query(filters.regex("^dv$"))
 async def abot_cb_handler(bot, query):
     await query.message.edit(
@@ -540,9 +557,12 @@ async def abot_cb_handler(bot, query):
         reply_markup=InlineKeyboardMarkup(buttons_dv),
         disable_web_page_preview=True,
     )
-#=============================================================
-#=============================================================
-#=============================================================
+
+
+# =============================================================
+# =============================================================
+# =============================================================
+
 
 # ==============CLOSE===================
 @Bot.on_callback_query(filters.regex("^close$"))
