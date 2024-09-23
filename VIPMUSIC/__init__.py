@@ -9,7 +9,6 @@
 
 from VIPMUSIC.core.bot import VIPBot
 from VIPMUSIC.core.dir import dirr
-
 from VIPMUSIC.core.userbot import Userbot
 from VIPMUSIC.misc import dbb, heroku, sudo
 
