@@ -9,7 +9,7 @@
 
 from VIPMUSIC.core.bot import VIPBot
 from VIPMUSIC.core.dir import dirr
-from VIPMUSIC.core.git import git
+
 from VIPMUSIC.core.userbot import Userbot
 from VIPMUSIC.misc import dbb, heroku, sudo
 
@@ -21,7 +21,6 @@ from .logging import LOGGER
 dirr()
 
 # Check Git Updates
-git()
 
 # Initialize Memory DB
 dbb()
